@@ -2,11 +2,82 @@
   color: #f42d1a;
 }
 
+.fa { 
+  color: #fff; 
+}
+
 .bg-theme {
   background-color: #f42d1a;
+  color: #fff;
+  border: 1px solid #f42d1a;
+}
+
+.bg-theme-3{
+  background-color: #F40D42;
+  color: #fff;
+}
+
+.bg-theme-3 input, 
+.bg-theme-3 textarea {
+  border-color: rgba(0,0,0,0.4);
+}
+
+.bg-theme-2 {
+  background-color: #1D2827;
   color: #fff;
 }
 
 body {
   color: #1c1c1c;
+}
+
+a.btn-theme, 
+input.btn-theme,
+button.btn-theme{
+  background-color: #f42d1a;
+  color: #fff;
+}
+
+.border-white {
+  border: 1.5px solid white;
+  border-radius: 2px;
+}
+
+.text-theme {
+  color: #f42d1a;
+}
+
+.btn.btn-theme:hover,
+.btn.btn-theme:active
+{
+  background-color: #e00000;
+  color: #fff;
+}
+
+.nav .overlay ul li a:hover,
+.nav .overlay ul li a.active,
+.nav .overlay ul li a .active:hover {
+  color: #f42d1a;
+} 
+
+
+@media (min-width: 768px) {
+  .nav .overlay ul li a.great-menu{
+    color: white;
+  }
+
+ .nav .overlay ul li a.great-menu:hover,
+ .nav .overlay ul li a.great-menu.active:hover
+  {
+    background-color: #e00000;
+    color: #fff;
+  } 
+
+  .nav .overlay ul li a:hover,
+  .nav .overlay ul li a.active,
+  .nav .overlay ul li a.active:hover {
+    background-color: #f42d1a;
+    color: #fff;
+  } 
+
 }
