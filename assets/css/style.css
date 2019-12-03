@@ -28,8 +28,77 @@ body {
 }
 
 .container {
-  width: 89.8%;
+  width: 80%;
   margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-1 {
+width: 8%;
+margin-left: 2px;
+}
+​
+.m-2{
+  width: 16%;
+  margin-left: 2px;
+}
+
+.m-3{
+  width: 24%;
+  margin-left: 2px;
+}
+​
+.m-4{
+  width: 32%;
+  margin-left: 2px;
+}
+​
+.m-5{
+  width: 40%;
+  margin-left: 2px;
+}
+​
+.m-6{
+  width: 48%;
+  margin-left: 2px;
+}
+​
+.m-7{
+  width: 56%;
+  margin-left: 2px;
+}
+​
+.m-8{
+  width: 64%;
+  margin-left: 2px;
+}
+​
+.m-9{
+  width: 72%;
+  margin-left: 2px;
+}
+​
+.m-10{
+  width: 80%;
+  margin-left: 2px;
+}
+​
+.m-11{
+  width: 88%;
+  margin-left: 2px;
+}
+​
+.m-12{
+  width: 100%;
 }
 
 a {
@@ -412,6 +481,11 @@ img.image-slider {
   display: none;
 }
 
+
+.partnerAlign {
+  margin-top: 45px;
+}
+
 /* */
 section.section-bg {
   width: 100%;
@@ -510,6 +584,91 @@ div.content-component {
   margin-top: 5px;
 }
 /**/
+
+
+/* Alex */
+.first-presentation {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mission li {
+  padding-bottom: 15px;
+}
+.first-presentation img {
+  width: 100%;
+  height: 200px;
+}
+.block-about {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.block-about p {
+  padding: 15px;
+}
+
+.first-presentation .p h2 span {
+  margin: auto;
+}
+
+/* Alex */
+
+/*Sebastien*/
+.HelpTitlePartners {
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.groupeLogoPartners .groupeLogoPartnersHoriz {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-bottom: 150px;
+}
+.logoPartner {
+  text-align: center;
+  width: 46%;
+}
+.logo-photo {
+  width: 99%;
+  height: 74px;
+  margin-bottom: 8px;
+}
+.NameBrandPartner {
+  font-size: 11px;
+  position: relative;
+  top: -20px;
+  text-align: center;
+}
+.logoPartner2 {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: blue;
+}
+.logoPartner3 {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: yellow;
+}
+.logoPartner4 {
+  display: flex;
+  width: 100px;
+  height: 100px;
+  background: green;
+}
+.logo-photo {
+  width: 45%;
+  height: 50px;
+}
+
+/* */
 
 div.newsletters {
   display: grid;
@@ -695,6 +854,67 @@ div.copyright .content {
     letter-spacing: 1px;
   }
 
+  .d-1 {
+    width: 8%;
+    margin-left: 2px;
+    }
+    ​
+    .d-2{
+      width: 16%;
+      margin-left: 2px;
+    }
+    
+    .d-3{
+      width: 24%;
+      margin-left: 2px;
+    }
+    ​
+    .d-4{
+      width: 32%;
+      margin-left: 2px;
+    }
+    ​
+    .d-5{
+      width: 40%;
+      margin-left: 2px;
+    }
+    ​
+    .d-6{
+      width: 48%;
+      margin-left: 2px;
+    }
+    ​
+    .d-7{
+      width: 56%;
+      margin-left: 2px;
+    }
+    ​
+    .d-8{
+      width: 64%;
+      margin-left: 2px;
+    }
+    ​
+    .d-9{
+      width: 72%;
+      margin-left: 2px;
+    }
+    ​
+    .d-10{
+      width: 80%;
+      margin-left: 2px;
+    }
+    ​
+    .d-11{
+      width: 88%;
+      margin-left: 2px;
+    }
+    ​
+    .d-12{
+      width: 100%;
+    }
+
+
+
   .sign-up-large a {
     transition: color 0.4s;
   }
@@ -825,6 +1045,10 @@ div.copyright .content {
     width: 80%;
   }
 
+  .partnerAlign {
+    margin-top: 55px;
+  }
+
   /* */
 
   .main-grid {
@@ -951,6 +1175,13 @@ div.copyright .content {
 
   /* */
 
+  /*Sebastien*/
+  .logoPartner {
+    width: 28%;
+    margin-bottom: 50px;
+  }
+  /* */
+
   section.section-bg {
     width: 100%;
     height: 12.5em;
@@ -993,10 +1224,11 @@ div.copyright .content {
   .our-contact,
   .contact-form {
     flex-grow: 1;
+    padding-top: 15px;
   }
 
   .contact-form {
-    padding: 10px 0px 30px 0px;
+    padding: 15px 0px 30px 0px;
   }
 
   .map iframe {
@@ -1020,7 +1252,44 @@ div.copyright .content {
   }
   /**/
 
+  
+  /* Alex */
+  .first-presentation {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mission li {
+    padding-bottom: 15px;
+  }
+  .first-presentation img {
+    width: 45%;
+    height: 250px;
+  }
+
+  .first-presentation .p {
+    width: 45%;
+  }
+  .block-about {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .block-about p {
+    width: 40%;
+    padding: 20px;
+  }
+
+  /* Alex */
+
   footer {
+    grid-template-columns: repeat(22, 1fr);
     padding-bottom: 4rem;
   }
 
@@ -1039,7 +1308,7 @@ div.copyright .content {
 
   footer .container-footer {
     grid-row: 1;
-    grid-column: 2 / span 18;
+    grid-column: 3 / span 18;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -1085,7 +1354,7 @@ div.copyright .content {
 
 @media (min-width: 1024px) {
   body {
-    font-size: 13.5px;
+    font-size: 13px;
   }
 
   .clearfix {
@@ -1095,7 +1364,7 @@ div.copyright .content {
   header {
     height: 100px;
     grid-template-rows: 1fr 1fr 1fr 7fr;
-    grid-template-columns: 1fr 2fr 1fr 16fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 16fr 1fr 1fr;
   }
 
   .header {
@@ -1104,7 +1373,7 @@ div.copyright .content {
     align-content: flex-start;
     align-items: center;
     grid-row: 4;
-    grid-column: 2;
+    grid-column: 3;
   }
 
   .sign-up-large {
@@ -1114,7 +1383,7 @@ div.copyright .content {
   .sign-up-large-desktop {
     display: block;
     grid-row: 1;
-    grid-column: 4;
+    grid-column: 5;
     position: relative;
     top: 18px;
     display: flex;
@@ -1133,12 +1402,41 @@ div.copyright .content {
   }
   .nav {
     grid-row: 4;
-    grid-column: 4;
+    grid-column: 5;
     justify-content: space-around;
   }
 
   .main-grid {
     grid-template-rows: 15.5em 1fr;
+    grid-template-columns: repeat(22, 1fr);
+  }
+
+  .our-contact .container{
+    width: 60%;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 87%;
+  }
+
+  .contact-form button.btn {
+    width: 89.7%;
+  }
+
+  /*Sebastien*/
+  .logoPartner {
+    width: 18%;
+    margin-bottom: 50px;
+  }
+
+  section.section-bg {
+    grid-column: 1 / span 22;
+  }
+
+  div.content-component {
+    grid-row: 2;
+    grid-column: 3 / span 18;
   }
 
   section.section-slider {
@@ -1152,6 +1450,10 @@ div.copyright .content {
 
   .map iframe {
     height: 300px;
+  }
+
+  .first-presentation img {
+    height: 320px;
   }
 
   div.newsletters {
@@ -1218,5 +1520,13 @@ div.copyright .content {
 
   footer li i {
     font-size: 23px;
+  }
+
+  div.copyright {
+    grid-template-columns: repeat(22, 1fr);
+  }
+  
+  div.copyright .content {
+    grid-column: 3 / span 18;
   }
 }
