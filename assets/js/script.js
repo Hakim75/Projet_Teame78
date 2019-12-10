@@ -16,3 +16,69 @@ var _gaq = _gaq || [];
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
+
+  
+
+$(document).ready(function() {
+
+  // Check if element is scrolled into view
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return elemBottom <= docViewBottom && elemTop >= docViewTop;
+  }
+
+  $('.has-animation').each(function(index) {
+    if($(window).scrollTop() + $(window).height() > $(this).offset().top + $(this).outerHeight() ){ 
+      $(this).delay($(this).data('delay')).queue(function(){
+          $(this).addClass('animate-in');
+      });    
+    }   
+  });  
+
+  // If element is scrolled into view, fade it in
+  $(window).scroll(function() {
+    $(".scroll-animations .animated").each(function() {
+      if (isScrolledIntoView(this) === true) {
+        $(this).addClass("fadeInLeft");
+      }
+    });
+    
+    $('.has-animation').each(function(index) {
+      if($(window).scrollTop() + $(window).height() > $(this).offset().top ){ 
+        $(this).delay($(this).data('delay')).queue(function(){
+            $(this).addClass('animate-in');
+        });    
+      }   
+    });   
+  });
+
+    // Click btn Animations
+  $(".send").on("click", function() {
+    var nbError = 0;
+
+    $("form .require").each(function (){
+      if($.trim($(this).val()) ==""){
+      $(this).addClass("form-error animated shake").one("webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend",
+        function() {
+          $(this).removeClass("animated shake");
+        });
+      nbError++;
+      }
+      else{
+        $(this).removeClass("form-error");
+      }
+    });
+
+    if(nbError==0){
+      return true;
+    } 
+
+    return false;
+  });
+
+});

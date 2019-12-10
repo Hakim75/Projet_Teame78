@@ -60,6 +60,10 @@ button.btn-theme{
   color: #f42d1a;
 } 
 
+.form-error {
+  border-color: #e00000;
+}
+
 
 @media (min-width: 768px) {
   .nav .overlay ul li a.great-menu{
