@@ -295,6 +295,47 @@ main {
   grid-template-columns: repeat(20, 1fr);
 }
 
+
+.partern.desktop{
+  display: none;
+}
+
+.main-grid.home {
+  grid-template-rows: 1fr;
+  min-height: 1px;
+}
+
+/*
+.main-grid.home {
+  grid-template-rows: 1fr;
+  min-height: 1px;
+  margin-top:-50px;
+  margin-bottom: 200px;
+}
+
+.partern {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  height: 8vh;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.patern a {
+  width: 75px;
+  height: 5;
+  display: inline-block;
+}
+
+.partern img, .patern a {
+  width: 100%;
+  height: 100%;
+}
+*/
+
 /* hakim */
 
 .pagination a.link {
@@ -802,6 +843,11 @@ Background
   margin: 80px auto 80px auto;
 }
 
+.text-part {
+  width: 96%;
+  margin: auto;
+}
+
 .text p {
   padding-left: 10px;
   padding-right: 10px;
@@ -853,6 +899,13 @@ Background
   animation: revealRTL 1s .6s ease;
 }
 
+.has-animation.animation-trl.animate-in:before {
+  animation: revealTRL 1.8s ease;
+}
+.has-animation.animation-trl.animate-in:after {
+  animation: revealTRL 1s .6s ease;
+}
+
 @keyframes revealRTL {
   0% {
     width: 0;
@@ -879,6 +932,22 @@ Background
   100% {
     width: 0;
     left: 100%;
+  }
+}
+@keyframes revealTRL {
+  0% {
+    height: 0;
+    top: 0;
+  }
+  65% {
+    height: 100%;
+    width: 100%;
+    top: 0;
+  }
+  100% {
+    height: 0;
+    width: 0;
+    top: 100%;
   }
 }
 @keyframes textHidden {
@@ -1273,7 +1342,41 @@ div.copyright .content {
   }
   
   .thematiques.desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 70%;
+    margin: auto;
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
+  .thematiques.desktop .shop-card-2 {
+    width: 32%;
+    padding-top: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+
+  .thematiques.desktop .shop-card-2 img {
+    width: 96%;
+    height: 30vh;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     display: block;
+    margin: 0 auto 10px auto;
+  }
+
+  .thematiques.desktop .btn {
+    margin: 60px auto;
+    font-size: 22px;
+  }
+
+  .text-part {
+    width: 50%;
+    padding: 20px 10px 20px 10px;
+    position: relative;
+    top: -9px;
   }
  
   .sign-up-large a {
@@ -1423,13 +1526,13 @@ div.copyright .content {
   }
 
   .img-teame {
-    width: 50%;
+    width: 60%;
     margin: auto;
   }
 
   .img-teame img {
     width: 100%;
-    height: 360px;
+    height: 300px;
   }
 
   #title {
@@ -1439,6 +1542,38 @@ div.copyright .content {
   .bigger {
     font-size: 50px;
     padding: 80px 0 40px 0;
+  }
+
+  .main-grid.home {
+    grid-template-rows: 1fr;
+    min-height: 1px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  .partern.mobile{ 
+    display: none;
+  }
+  
+  .partern.desktop{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    margin: auto;
+    align-items: center;
+  }
+  
+  .partern.desktop a.elm-partern {
+    width: 15%;
+    height: 100%;
+  }
+  
+  .partern.desktop a.elm-partern img{
+    width: 100%;
+    height: 80%;
   }
 
   /* hakim */
@@ -1935,4 +2070,21 @@ div.copyright .content {
   div.copyright .content {
     grid-column: 3 / span 18;
   }
+
+  .thematiques.desktop .shop-card-2 img {
+    height: 40vh;
+  }
+
+  .img-teame {
+    width: 50%;
+  }
+
+  .img-teame img {
+    height: 360px;
+  }
+  
+  .partern.desktop{
+    height: 130px;
+  }
+  
 }
