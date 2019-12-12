@@ -105,13 +105,13 @@ button span {
 header {
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-  height: 100px;
+  height: 80px;
   background: white;
 }
 
 .header {
   width: 100%;
-  height: 100px;
+  height: 80px;
   align-items: flex-start;
   display: grid;
   grid-template-rows: 1fr 1fr 5fr;
@@ -119,13 +119,16 @@ header {
 }
 
 .header .logo {
-  grid-row: 3;
-  grid-column: 9 / span 6;
-  margin-top: 12px;
+  grid-row: 1 / span 3;
+  grid-column: 6 / span 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 .header img {
-  width: 90px;
+  width: 80px;
 }
 
 header .menu {
@@ -1453,7 +1456,9 @@ div.copyright .content {
   }
 
   .header img {
-    width: 130px;
+    width: 70px;
+    position: relative;
+    top: -12px;
   }
 
   .header a.sub-btn {
@@ -1462,11 +1467,11 @@ div.copyright .content {
 
   .nav {
     grid-row: 2;
-    grid-column: 1;
+    grid-column: 1 / span 20;
     height: 2.8rem;
     display: flex;
     justify-content: space-between;
-    line-height: 2.5rem;
+    line-height: 2.1rem;
     width: 100%;
   }
 
@@ -1484,6 +1489,11 @@ div.copyright .content {
     width: 100%;
     padding: 0;
     flex-wrap: wrap;
+  }
+
+  .nav .overlay .primary-menu {
+    position: relative;
+    top: -15px;
   }
 
   .nav .overlay ul li a {
@@ -1864,11 +1874,12 @@ div.copyright .content {
   }
 
   footer .container-footer .logo-footer img {
-    width: 9rem;
+    width: 6rem;
   }
 
   footer .container-footer .logo-footer {
     display: block;
+    text-align: center;
     width: 100%;
     order: 1;
   }
@@ -1904,6 +1915,7 @@ div.copyright .content {
 
   header {
     height: 100px;
+    width: 100%;
     grid-template-rows: 1fr 1fr 1fr 7fr;
     grid-template-columns: 1fr 1fr 2fr 1fr 16fr 1fr 1fr;
   }
@@ -1913,8 +1925,18 @@ div.copyright .content {
     padding: 0 12px;
     align-content: flex-start;
     align-items: center;
-    grid-row: 4;
+    grid-row: 2 / span 3;
     grid-column: 3;
+  }
+
+  .header img {
+    width: 98px;
+    position: relative;
+    top: -3vh;
+  }
+  
+  .nav .overlay .primary-menu {
+    top: 0px;
   }
 
   .sign-up-large {
@@ -2002,7 +2024,7 @@ div.copyright .content {
   }
 
   footer .container-footer .logo-footer img {
-    width: 128px;
+    width: 98px;
   }
 
   footer .container-footer .logo-footer {
