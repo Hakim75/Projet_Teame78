@@ -1963,7 +1963,7 @@ div.copyright .content {
   }
   .nav {
     grid-row: 4;
-    grid-column: 5;
+    grid-column: 4 / span 2;
     justify-content: space-around;
   }
 
