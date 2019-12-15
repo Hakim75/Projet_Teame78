@@ -133,3 +133,10 @@ $slider.slick({
     borderColor: color2
   });
 });
+
+$('.autoplay').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+});

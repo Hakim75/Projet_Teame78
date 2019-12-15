@@ -315,29 +315,27 @@ main {
   margin-top:-50px;
   margin-bottom: 200px;
 }
-
-.partern {
+*/
+.partern.mobile {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
   height: 8vh;
-  margin: auto;
-  border: 1px solid black;
+  margin-top: 20px;
 }
 
-.patern a {
-  width: 75px;
-  height: 5;
+.partern.mobile a {
+  width: 45%;
+  height: 15vh;
+  margin-left: 10px;
   display: inline-block;
 }
 
-.partern img, .patern a {
+.partern.mobile a img {
   width: 100%;
-  height: 100%;
 }
-*/
 
 /* hakim */
 
