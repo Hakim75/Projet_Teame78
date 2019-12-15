@@ -698,7 +698,7 @@ Shop Card
 
 .shop-card figure img {
   width: 88%;
-  height: 220px;
+  height: 30vh;
   display: block;
   margin: auto;
 }
