@@ -11,6 +11,8 @@
     <link rel="stylesheet" type="text/css" href="assets/css/icofont.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/slick.min.css" />
     <link rel="stylesheet" href="assets/css/swiper.min.css">
+    <link rel="stylesheet" href="assets/css/modal.css">
+    <script src="assets/js/modernizr.min.js"></script>
     <link
       rel="stylesheet"
       type="text/css"
@@ -44,16 +46,16 @@
           <div class="logo">
             <a href="index.html"><img src="assets/img/logo.png" alt="logo teame78" /></a>
           </div>
-          <a class="sign-up" href="#"><i class="icofont-user"></i></a>
+          <a class="sign-up cd-signin" href="#"><i class="icofont-user"></i></a>
           <div class="sign-up-large">
-            <a href="connexion.html"><i class="icofont-sign-in"></i> CONNEXION</a> |
-            <a href="inscription.html"><i class="icofont-user"></i> INSCRIPTION</a>
+            <a href="#" class="cd-signin"><i class="icofont-sign-in"></i> CONNEXION</a> |
+            <a href="#" class="cd-signup"><i class="icofont-user"></i> INSCRIPTION</a>
           </div>
           <!--<a href="#" class="sub-btn btn btn-theme">Faire un don</a> -->
         </div>
         <div class="sign-up-large-desktop">
-          <a href="connexion.html"><i class="icofont-sign-in"></i> CONNEXION</a> |
-          <a href="inscription.html"><i class="icofont-user"></i> INSCRIPTION</a>
+          <a href="#" class="cd-signin"><i class="icofont-sign-in"></i> CONNEXION</a> |
+          <a href="#" class="cd-signup"><i class="icofont-user"></i> INSCRIPTION</a>
         </div>
         <div class="menu">
           <span class="bar"></span>
@@ -165,10 +167,6 @@
           </div>
 
           <div class="bg"></div>
-
-          <a class="the-most btn bg-theme-2" target="_blank" href="#">
-            QUIZ J'ACT
-          </a>
         </section>
         <section class="thematiques desktop">
           <div class="shop-card-2 has-animation animation-ltr">
@@ -449,11 +447,106 @@
       </div>
     </div>
 
+    <div class="cd-user-modal" id="modal"> <!-- this is the entire modal form, including the background -->
+      <div class="cd-user-modal-container"> <!-- this is the container wrapper -->
+        <ul class="cd-switcher">
+          <li><a href="#0">CONNEXION</a></li>
+          <li><a href="#0">NOUVEAU COMPTE</a></li>
+        </ul>
+
+        <div id="cd-login"> <!-- log in form -->
+          <form class="cd-form">
+            <p class="fieldset">
+              <label class="image-replace cd-username" for="signup-username">Identifiant</label>
+              <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Identifiant">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <label class="image-replace cd-password" for="signin-password">Mot de passe</label>
+              <input class="full-width has-padding has-border" id="signin-password" type="password"  placeholder="Mot de passe">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input type="checkbox" id="remember-me" checked>
+              <label for="remember-me">Se souvenir de moi</label>
+            </p>
+
+            <p class="fieldset">
+              <button type="submit" class="btn bg-theme form-element send-forgot padding-b-10">Se connecter</button>
+            </p>
+          </form>
+          <p class="cd-form-bottom-message"><a href="#0">Mot de passe oublié ?</a></p>
+          <!-- <a href="#0" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-login -->
+
+        <div id="cd-signup"> <!-- sign up form -->
+          <form class="cd-form">
+            <p class="fieldset">
+              <label class="image-replace cd-username" for="signup-username">Identifiant</label>
+              <input class="full-width has-padding has-border" id="signup-username" type="text" placeholder="Identifiant">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <label class="image-replace cd-email" for="signup-email">Email</label>
+              <input class="full-width has-padding has-border" id="signup-email" type="email" placeholder="Email">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <label class="image-replace cd-password" for="signup-password">Mot de passe</label>
+              <input class="full-width has-padding has-border" id="signup-password" type="password"  placeholder="Mot de passe">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <label class="image-replace cd-password" for="signup-password-confirm">Confirmer le mot de passe</label>
+              <input class="full-width has-padding has-border" id="signup-password-confirm" type="password"  placeholder="Confirmer le mot de passe">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <input type="checkbox" id="accept-terms">
+              <label for="accept-terms">J'accepte toutes les <a href="#0">Termes & Conditions</a></label>
+            </p>
+
+            <p class="fieldset">
+              <button type="submit" class="btn bg-theme form-element send-create padding-b-10">Créer le compte</button>
+            </p>
+          </form>
+
+          <!-- <a href="#0" class="cd-close-form">Close</a> -->
+        </div> <!-- cd-signup -->
+
+        <div id="cd-reset-password"> <!-- reset password form -->
+          <p class="cd-form-message">Mot de passe perdu ? Veuillez saisir votre adresse email. Vous recevrez un lien pour créer un nouveau mot de passe.</p>
+
+          <form class="cd-form">
+            <p class="fieldset">
+              <label class="image-replace cd-email" for="reset-email">Email</label>
+              <input class="full-width has-padding has-border" id="reset-email" type="email" placeholder="Email">
+              <span class="cd-error-message">Error message here!</span>
+            </p>
+
+            <p class="fieldset">
+              <button type="submit" class="btn bg-theme form-element send-forgot padding-b-10">Envoyer</button>
+            </p>
+          </form>
+
+          <p class="cd-form-bottom-message"><a href="#0">Retour à la connexion</a></p>
+        </div> <!-- cd-reset-password -->
+        <a href="#0" class="cd-close-form">Close</a>
+      </div> <!-- cd-user-modal-container -->
+    </div>
+
     <script src="assets/js/jquery-3.3.1.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/slick.min.js"></script>
     <script src="assets/js/swiper.min.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/modal.js"></script>
     <script src="assets/js/image-slider.js"></script>
   </body>
 </html>
